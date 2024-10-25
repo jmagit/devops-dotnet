@@ -1,0 +1,97 @@
+<testsuites>
+  <testsuite name="Utilidades.xUnit.Tests.dll" tests="69" skipped="2" failures="0" errors="0" time="0.4350251" timestamp="2024-10-25T10:10:23" hostname="JAVIER-LAPTOP" id="0" package="Utilidades.xUnit.Tests.dll">
+    <properties />
+    <testcase classname="GildedRoseTests.ApprovalTest" name="ThirtyDays" time="0.0010000">
+      <skipped />
+    </testcase>
+    <testcase classname="GildedRoseTests.GildedRoseTest" name="foo" time="0.0010000">
+      <skipped />
+    </testcase>
+    <testcase classname="Utilidades.Tests.ValidadorTests" name="MaxLenghtTrue" time="0.0073490" />
+    <testcase classname="Utilidades.Tests.PersonasListTests" name="ElementosTest" time="0.0113073" />
+    <testcase classname="GildedRoseKata.Tests.GildedRoseTests" name="Product_Passes_Test(sellIn: 7, quality: 1, sellInResult: 6, qualityResult: 3)" time="0.0112032" />
+    <testcase classname="Utilidades.Tests.CalculadoraTests" name="RestaTest(operando1: 2, operando2: 3, expect: -1)" time="0.0111655" />
+    <testcase classname="Utilidades.Tests.PersonaTests" name="GetTest" time="0.0115958" />
+    <testcase classname="Utilidades.Tests.PersonasTests" name="OtraPruebaTest" time="0.0002461" />
+    <testcase classname="GildedRoseKata.Tests.GildedRoseTests" name="Product_Passes_Test(sellIn: 5, quality: 3, sellInResult: 4, qualityResult: 6)" time="0.0004082" />
+    <testcase classname="GildedRoseKata.Tests.GildedRoseTests" name="Product_Passes_Test(sellIn: 7, quality: 49, sellInResult: 6, qualityResult: 50)" time="0.0000160" />
+    <testcase classname="GildedRoseKata.Tests.GildedRoseTests" name="Product_Passes_Test(sellIn: -1, quality: 3, sellInResult: -2, qualityResult: 0)" time="0.0000167" />
+    <testcase classname="GildedRoseKata.Tests.GildedRoseTests" name="Product_Passes_Test(sellIn: 11, quality: 0, sellInResult: 10, qualityResult: 1)" time="0.0000127" />
+    <testcase classname="Utilidades.Tests.CalculadoraTests" name="RestaTest(operando1: 1, operando2: 0,90000000000000002, expect: 0,10000000000000001)" time="0.0005588" />
+    <testcase classname="GildedRoseKata.Tests.GildedRoseTests" name="Product_Passes_Test(sellIn: 0, quality: 3, sellInResult: -1, qualityResult: 0)" time="0.0000144" />
+    <testcase classname="Utilidades.Tests.CalculadoraTests" name="RestaTest(operando1: 1, operando2: 0, expect: 1)" time="0.0000169" />
+    <testcase classname="Utilidades.Tests.CalculadoraTests" name="RestaTest(operando1: 5, operando2: 2, expect: 3)" time="0.0000134" />
+    <testcase classname="GildedRoseKata.Tests.GildedRoseTests" name="Product_Common_Test(sellIn: 0, quality: 3, sellInResult: -1, qualityResult: 1)" time="0.0006154" />
+    <testcase classname="GildedRoseKata.Tests.GildedRoseTests" name="Product_Common_Test(sellIn: 11, quality: 10, sellInResult: 10, qualityResult: 9)" time="0.0003601" />
+    <testcase classname="GildedRoseKata.Tests.GildedRoseTests" name="Product_Common_Test(sellIn: 7, quality: 1, sellInResult: 6, qualityResult: 0)" time="0.0000167" />
+    <testcase classname="Utilidades.Tests.ValidadorTests" name="IsNIFFalse(caso: &quot;12345678&quot;)" time="0.0131839" />
+    <testcase classname="Utilidades.Tests.ValidadorTests" name="IsNIFFalse(caso: &quot;G4&quot;)" time="0.0002320" />
+    <testcase classname="Utilidades.Tests.ValidadorTests" name="IsNIFFalse(caso: &quot;&quot;)" time="0.0000115" />
+    <testcase classname="Utilidades.Tests.ValidadorTests" name="IsNIFFalse(caso: null)" time="0.0000090" />
+    <testcase classname="Utilidades.Tests.ValidadorTests" name="IsBlankTrue(caso: null)" time="0.0000888" />
+    <testcase classname="Utilidades.Tests.ValidadorTests" name="IsBlankTrue(caso: &quot;&quot;)" time="0.0001647" />
+    <testcase classname="Utilidades.Tests.ValidadorTests" name="IsBlankTrue(caso: &quot;    &quot;)" time="0.0000153" />
+    <testcase classname="Utilidades.Tests.ValidadorTests" name="IsNotBlankTrue(caso: &quot;&quot;)" time="0.0001518" />
+    <testcase classname="Utilidades.Tests.ValidadorTests" name="IsNotBlankTrue(caso: &quot;    &quot;)" time="0.0001488" />
+    <testcase classname="Utilidades.Tests.ValidadorTests" name="IsNotBlankTrue(caso: null)" time="0.0000118" />
+    <testcase classname="Utilidades.Tests.ValidadorTests" name="IsNIFTrue(caso: &quot;12345678z&quot;)" time="0.0001546" />
+    <testcase classname="Utilidades.Tests.ValidadorTests" name="IsNIFTrue(caso: &quot;4G&quot;)" time="0.0001630" />
+    <testcase classname="Utilidades.Tests.ValidadorTests" name="MaxLenghtFalse" time="0.0000886" />
+    <testcase classname="Utilidades.Tests.ValidadorTests" name="PosiveTrue" time="0.0001553" />
+    <testcase classname="Utilidades.Tests.ValidadorTests" name="PosiveFalse" time="0.0000742" />
+    <testcase classname="Utilidades.Tests.PersonaTests" name="ToStringTest" time="0.0539332" />
+    <testcase classname="GildedRoseKata.Tests.GildedRoseTests" name="Product_Aged_Brie_Test(sellIn: 1, quality: 1, sellInResult: 0, qualityResult: 2)" time="0.0636650" />
+    <testcase classname="GildedRoseKata.Tests.GildedRoseTests" name="Product_Aged_Brie_Test(sellIn: 2, quality: 0, sellInResult: 1, qualityResult: 1)" time="0.0014012" />
+    <testcase classname="GildedRoseKata.Tests.GildedRoseTests" name="Product_Aged_Brie_Test(sellIn: 2, quality: 50, sellInResult: 1, qualityResult: 50)" time="0.0001670" />
+    <testcase classname="GildedRoseKata.Tests.GildedRoseTests" name="Product_Aged_Brie_Test(sellIn: -1, quality: 48, sellInResult: -2, qualityResult: 50)" time="0.0001530" />
+    <testcase classname="GildedRoseKata.Tests.GildedRoseTests" name="Product_Aged_Brie_Test(sellIn: -2, quality: 49, sellInResult: -3, qualityResult: 50)" time="0.0001396" />
+    <testcase classname="GildedRoseKata.Tests.GildedRoseTests" name="Product_Sulfuras_Test(sellIn: 1, quality: 0, sellInResult: 1, qualityResult: 0)" time="0.0006217" />
+    <testcase classname="GildedRoseKata.Tests.GildedRoseTests" name="Product_Sulfuras_Test(sellIn: -1, quality: 1, sellInResult: -1, qualityResult: 1)" time="0.0003405" />
+    <testcase classname="GildedRoseKata.Tests.GildedRoseTests" name="Product_Sulfuras_Test(sellIn: 0, quality: 1, sellInResult: 0, qualityResult: 1)" time="0.0000177" />
+    <testcase classname="Utilidades.Tests.PersonasServiceTests" name="addInvalidosKO" time="0.0982927" />
+    <testcase classname="Utilidades.Tests.PersonasServiceTests" name="addSinDatosKO" time="0.0017315" />
+    <testcase classname="Utilidades.Tests.PersonasServiceTests" name="addYaExisteKO" time="0.0101424" />
+    <testcase classname="Utilidades.Tests.CalculadoraTests" name="Moqueada" time="0.1034580" />
+    <testcase classname="Utilidades.Tests.CalculadoraTests" name="DivideDouble" time="0.0002231" />
+    <testcase classname="Utilidades.Tests.CalculadoraTests" name="SumasDoubleTest(operando1: 3, operando2: 0,5, expect: 3,5)" time="0.0001666" />
+    <testcase classname="Utilidades.Tests.CalculadoraTests" name="SumasDoubleTest(operando1: 1, operando2: -0,90000000000000002, expect: 0,10000000000000001)" time="0.0002746" />
+    <testcase classname="Utilidades.Tests.CalculadoraTests" name="SumasDoubleTest(operando1: 0,10000000000000001, operando2: 0,20000000000000001, expect: 0,29999999999999999)" time="0.0000106" />
+    <testcase classname="Utilidades.Tests.PersonasServiceTests" name="addFallaRepositorio" time="0.0065447" />
+    <testcase classname="Utilidades.Tests.CalculadoraTests" name="SumasDoubleTest(operando1: 2, operando2: 3, expect: 5)" time="0.0000120" />
+    <testcase classname="Utilidades.Tests.CalculadoraTests" name="Flujo" time="0.0001352" />
+    <testcase classname="Utilidades.Tests.CalculadoraTests" name="DivideInt" time="0.0001295" />
+    <testcase classname="Utilidades.Tests.CalculadoraTests" name="SumasIntTest(operando1: 2, operando2: 3, expect: 5)" time="0.0001960" />
+    <testcase classname="Utilidades.Tests.CalculadoraTests" name="SumasIntTest(operando1: -2, operando2: 1, expect: -1)" time="0.0002187" />
+    <testcase classname="Utilidades.Tests.CalculadoraTests" name="SumasIntTest(operando1: 3, operando2: 0, expect: 3)" time="0.0000095" />
+    <testcase classname="Utilidades.Tests.CalculadoraTests" name="SumasIntTest(operando1: 1, operando2: -1, expect: 0)" time="0.0000066" />
+    <testcase classname="Utilidades.Tests.CalculadoraTests" name="SumasIntTest(operando1: 2, operando2: 2, expect: 4)" time="0.0000310" />
+    <testcase classname="Utilidades.Tests.CalculadoraTests" name="Suma_IEEE_Test" time="0.0001657" />
+    <testcase classname="Utilidades.Tests.PersonasServiceTests" name="addTest" time="0.0015175" />
+    <testcase classname="Utilidades.Tests.CalculadoraTests" name="SumaDoubleTest" time="0.0002316" />
+    <testcase classname="Utilidades.Tests.CalculadoraTests" name="SumaDoubleTestKO" time="0.0002052" />
+    <testcase classname="Utilidades.Tests.CalculadoraTests" name="SumaDecimalTest" time="0.0027374" />
+    <testcase classname="Utilidades.Tests.CalculadoraTests" name="SumaTest" time="0.0001164" />
+    <testcase classname="Utilidades.Tests.CalculadoraTests" name="DivideIntKO" time="0.0002724" />
+    <testcase classname="Utilidades.Tests.CalculadoraTests" name="DivideDoubleKO" time="0.0159392" />
+    <testcase classname="Utilidades.Tests.CalculadoraTests" name="Privado" time="0.0002486" />
+    <system-out>Id: 2, Nombre: Carmelo, Apellidos: Coton, Jubilado: no
+148
+Id: 188, Nombre: Nombre2d6ed2ef-f838-4065-83b1-1ad0d7a69504, Apellidos: Apellidos1dc98eae-ab05-4783-b9cf-94b6d759b993, Jubilado: si
+
+Esto falla
+
+
+Test Framework Informational Messages:
+[xUnit.net 00:00:00.00] xUnit.net VSTest Adapter v2.8.2+699d445a1a (64-bit .NET 8.0.10)
+[xUnit.net 00:00:00.10]   Discovering: Utilidades.xUnit.Tests
+[xUnit.net 00:00:00.18]   Discovered:  Utilidades.xUnit.Tests
+[xUnit.net 00:00:00.19]   Starting:    Utilidades.xUnit.Tests
+[xUnit.net 00:00:00.23]       Demasiado grueso
+[xUnit.net 00:00:00.23]       Demo
+[xUnit.net 00:00:00.38]   Finished:    Utilidades.xUnit.Tests
+</system-out>
+    <system-err>Warning - [xUnit.net 00:00:00.23]     GildedRoseTests.ApprovalTest.ThirtyDays [SKIP]
+Warning - [xUnit.net 00:00:00.23]     GildedRoseTests.GildedRoseTest.foo [SKIP]
+</system-err>
+  </testsuite>
+</testsuites>
