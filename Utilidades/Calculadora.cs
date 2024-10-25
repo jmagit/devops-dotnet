@@ -41,7 +41,7 @@ namespace Utilidades {
             var result = a;
             foreach(var val in otros)
                 result += val;
-            return result / otros.Length + 2;
+            return result / (otros.Length + 1);
         }
 
         public double Resta(double a, double b) {
