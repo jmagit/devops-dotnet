@@ -164,6 +164,10 @@ namespace Utilidades.Tests {
         }
 
         [Fact]
+        public void AvgValid() {
+            Assert.Equal(2, sut.Avg(1, 2, 3));
+        }
+        [Fact]
         public void Privado() {
             var arrange = sut;
             MethodInfo? privado = arrange.GetType().GetMethod("RoundIEEE754", BindingFlags.NonPublic | BindingFlags.Instance);

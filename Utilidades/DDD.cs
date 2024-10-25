@@ -10,10 +10,10 @@ namespace Utilidades {
         List<E> GetAll();
         List<E> GetBy(Func<E, bool> predicate);
         E? GetById(K id);
-        E add(E item);
-        E modify(E item);
-        void delete(E item);
-        void deleteById(K id);
+        E Add(E item);
+        E Modify(E item);
+        void Delete(E item);
+        void DeleteById(K id);
 
     }
 
@@ -23,10 +23,10 @@ namespace Utilidades {
         List<E> GetAll();
         List<E> GetBy(Func<E, bool> predicate);
         E? GetById(K id);
-        E add(E item);
-        E modify(E item);
-        void delete(E item);
-        void deleteById(K id);
+        E Add(E item);
+        E Modify(E item);
+        void Delete(E item);
+        void DeleteById(K id);
 
     }
 
@@ -52,12 +52,12 @@ namespace Utilidades {
             return dao.GetById(id);
         }
 
-        public Persona add(Persona item) {
+        public Persona Add(Persona item) {
             if(item == null) throw new ArgumentNullException(nameof(item));
             if(!item.IsValid())  throw new ArgumentException("Datos inválidos");
             if(GetById(item.Id) != null) throw new ArgumentException("Ya existe");
             try {
-            return dao.add(item);
+            return dao.Add(item);
             } catch(Exception ex) {
                 if(ex.Message.StartsWith("UNIQUE CONTRAINS"))
                     throw new ArgumentException("Datos inválidos", ex);
@@ -65,24 +65,24 @@ namespace Utilidades {
             }
         }
 
-        public Persona modify(Persona item) {
+        public Persona Modify(Persona item) {
             ArgumentNullException.ThrowIfNull(item);
             if(!item.IsValid()) throw new ArgumentException("Datos inválidos");
             if(GetById(item.Id) == null) throw new ArgumentException("No existe");
             try {
-                return dao.modify(item);
+                return dao.Modify(item);
             } catch(Exception ex) {
                 if(ex.Message.StartsWith("UNIQUE CONTRAINS"))
                     throw new ArgumentException("Datos inválidos", ex);
                 throw;
             }
         }
-        public void delete(Persona item) {
-            dao.delete(item);
+        public void Delete(Persona item) {
+            dao.Delete(item);
         }
 
-        public void deleteById(int id) {
-            dao.deleteById(id);
+        public void DeleteById(int id) {
+            dao.DeleteById(id);
         }
     }
 }

@@ -12,13 +12,13 @@ using Assert = Xunit.Assert;
 namespace Utilidades.Tests {
     public class PersonasServiceTests {
         [Fact()]
-        public void addTest() {
+        public void AddTest() {
             var persona = new Persona { Id = 1, Nombre = "Pepito", Apellidos = "Grillo" };
             var mock = new Mock<IPersonasRepository>();
             mock.Setup(o => o.GetById(1)).Returns((Persona?)null);
-            mock.Setup(o => o.add(It.IsAny<Persona>())).Returns(persona);
+            mock.Setup(o => o.Add(It.IsAny<Persona>())).Returns(persona);
             var service = new PersonasService(mock.Object);
-            var p = service.add(persona);
+            var p = service.Add(persona);
 
             Assert.NotNull(p);
             Assert.Multiple(
@@ -28,46 +28,75 @@ namespace Utilidades.Tests {
             );
         }
         [Fact()]
-        public void addYaExisteKO() {
+        public void AddYaExisteKO() {
             var persona = new Persona { Id = 1, Nombre = "Pepito", Apellidos = "Grillo" };
             var mock = new Mock<IPersonasRepository>();
             mock.Setup(o => o.GetById(1)).Returns(persona);
-            mock.Setup(o => o.add(It.IsAny<Persona>())).Returns(persona);
+            mock.Setup(o => o.Add(It.IsAny<Persona>())).Returns(persona);
             var service = new PersonasService(mock.Object);
 
-            var ex = Assert.Throws<ArgumentException>(() => service.add(persona));
+            var ex = Assert.Throws<ArgumentException>(() => service.Add(persona));
             Assert.Equal("Ya existe", ex.Message);
         }
         [Fact()]
-        public void addInvalidosKO() {
+        public void AddInvalidosKO() {
             var persona = new Persona { Id = 1, Nombre = "    ", Apellidos = "Grillo" };
             var mock = new Mock<IPersonasRepository>();
             mock.Setup(o => o.GetById(1)).Returns(persona);
-            mock.Setup(o => o.add(It.IsAny<Persona>())).Returns(persona);
+            mock.Setup(o => o.Add(It.IsAny<Persona>())).Returns(persona);
             var service = new PersonasService(mock.Object);
 
-            var ex = Assert.Throws<ArgumentException>(() => service.add(persona));
+            var ex = Assert.Throws<ArgumentException>(() => service.Add(persona));
             Assert.Equal("Datos inválidos", ex.Message);
         }
         [Fact()]
-        public void addSinDatosKO() {
+        public void AddSinDatosKO() {
             var persona = new Persona { Id = 1, Nombre = "    ", Apellidos = "Grillo" };
             var mock = new Mock<IPersonasRepository>();
-            mock.Setup(o => o.add(It.IsAny<Persona>())).Returns(persona);
+            mock.Setup(o => o.Add(It.IsAny<Persona>())).Returns(persona);
             var service = new PersonasService(mock.Object);
 
-            var ex = Assert.Throws<ArgumentNullException>(() => service.add(null!));
+            var ex = Assert.Throws<ArgumentNullException>(() => service.Add(null!));
             //Assert.Equal("item", ex.Message);
         }
         [Fact()]
-        public void addFallaRepositorio() {
+        public void AddFallaRepositorio() {
             var persona = new Persona { Id = 1, Nombre = "kkk", Apellidos = "Grillo" };
             var mock = new Mock<IPersonasRepository>();
             mock.Setup(o => o.GetById(1)).Returns((Persona?)null);
-            mock.Setup(o => o.add(It.IsAny<Persona>())).Throws(() => new Exception("UNIQUE CONTRAINS ..."));
+            mock.Setup(o => o.Add(It.IsAny<Persona>())).Throws(() => new Exception("UNIQUE CONTRAINS ..."));
             var service = new PersonasService(mock.Object);
 
-            var ex = Assert.Throws<ArgumentException>(() => service.add(persona));
+            var ex = Assert.Throws<ArgumentException>(() => service.Add(persona));
+            Assert.Equal("Datos inválidos", ex.Message);
+            mock.VerifyAll();
+        }
+        [Fact()]
+        public void ModifyTest() {
+            var personaOld = new Persona { Id = 1, Nombre = "Pepito", Apellidos = "Grillo" };
+            var personaNew = new Persona { Id = 1, Nombre = "GRILLO", Apellidos = "PEPITO" };
+            var mock = new Mock<IPersonasRepository>();
+            mock.Setup(o => o.GetById(1)).Returns(personaOld);
+            mock.Setup(o => o.Modify(It.IsAny<Persona>())).Returns(personaNew);
+            var service = new PersonasService(mock.Object);
+            var p = service.Modify(personaNew);
+
+            Assert.NotNull(p);
+            Assert.Multiple(
+                () => Assert.Equal(1, p.Id),
+                () => Assert.Equal("GRILLO", p.Nombre),
+                () => Assert.Equal("PEPITO", p.Apellidos)
+            );
+        }
+        [Fact()]
+        public void ModifyFallaRepositorio() {
+            var persona = new Persona { Id = 1, Nombre = "kkk", Apellidos = "Grillo" };
+            var mock = new Mock<IPersonasRepository>();
+            mock.Setup(o => o.GetById(1)).Returns(persona);
+            mock.Setup(o => o.Modify(It.IsAny<Persona>())).Throws(() => new Exception("UNIQUE CONTRAINS ..."));
+            var service = new PersonasService(mock.Object);
+
+            var ex = Assert.Throws<ArgumentException>(() => service.Modify(persona));
             Assert.Equal("Datos inválidos", ex.Message);
             mock.VerifyAll();
         }
